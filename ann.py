@@ -31,3 +31,7 @@ model.fit(X_train,y_train,epochs = 200, validation_split = 0.1, batch_size = 10)
 accuracy = model.evaluate(X_test,y_test)
 
 print(accuracy)
+
+predictions = model.predict_classes(X_test,verbose = 0)
+
+cm = confusion_matrix(X_test,predictions)
